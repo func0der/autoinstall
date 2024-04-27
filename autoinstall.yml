@@ -1,0 +1,35 @@
+autoinstall:
+	version: 1
+  early-commands:
+    # - generate passphrase
+    # - activate reset partition if drive big enough
+    # - Build identity section
+	locale: en_GB.UTF-8
+  update: true
+  keyboard: pc105
+  layout: de
+  search_drivers: true
+  autoinstall:
+  storage:
+    layout:
+      name: lvm
+      password: test123
+      sizing-policy: scale
+      reset-partition: true
+  #identity:
+  #  realname: Ted Barnsteen
+  #  username: ted-barnsteen
+  #  hostname: TBPC
+  #  password: '$y$j9T$jQaFzkJ6lZWCIoNfGdpU30$y9Siw/eL6kRCHiJi6Utdl4MWdp.XdOZdMc0k1NjeWt4' # test123
+  user-data:
+    users: ['']
+  codecs:
+    install: true
+  drivers:
+    install: true
+  snaps:
+    - name: code
+      classic: false
+    - name: chromium
+  timezone: Europe/Berlin
+  updates: all
