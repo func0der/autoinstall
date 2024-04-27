@@ -6,8 +6,8 @@ autoinstall:
     # - Build identity section
   locale: en_GB.UTF-8
   update: true
-  keyboard: pc105
-  layout: de
+  keyboard:
+    layout: de
   search_drivers: true
   storage:
     layout:
