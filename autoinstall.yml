@@ -1,15 +1,14 @@
 autoinstall:
-	version: 1
-  early-commands:
+  version: 1
+  early-commands: []
     # - generate passphrase
     # - activate reset partition if drive big enough
     # - Build identity section
-	locale: en_GB.UTF-8
+  locale: en_GB.UTF-8
   update: true
   keyboard: pc105
   layout: de
   search_drivers: true
-  autoinstall:
   storage:
     layout:
       name: lvm
