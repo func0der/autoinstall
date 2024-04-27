@@ -5,15 +5,17 @@ autoinstall:
     # - activate reset partition if drive big enough
     # - Build identity section
   locale: en_GB.UTF-8
-  update: true
+  refresh-installer:
+    update: true
   keyboard:
     layout: de
-  search_drivers: true
+  source:
+    search_drivers: true
   storage:
     layout:
       name: lvm
       password: test123
-      sizing-policy: scale
+      sizing-policy: scaled
       reset-partition: true
   #identity:
   #  realname: Ted Barnsteen
