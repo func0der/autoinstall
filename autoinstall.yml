@@ -1,5 +1,8 @@
 autoinstall:
   version: 1
+  interactive-sections:
+    - identity
+    - storage
   early-commands: []
     # - generate passphrase
     # - activate reset partition if drive big enough
@@ -16,11 +19,11 @@ autoinstall:
       name: lvm
       password: test123
       sizing-policy: scaled
-  #identity:
-  #  realname: Ted Barnsteen
-  #  username: ted-barnsteen
-  #  hostname: TBPC
-  #  password: '$y$j9T$jQaFzkJ6lZWCIoNfGdpU30$y9Siw/eL6kRCHiJi6Utdl4MWdp.XdOZdMc0k1NjeWt4' # test123
+  identity:
+    realname:
+    username:
+    password:
+    hostname: inventar-
   user-data:
     users: ['']
   codecs:
@@ -30,6 +33,11 @@ autoinstall:
   snaps:
     - name: code
       classic: false
+    - name: phpstorm
+      classic: false
     - name: chromium
+      classic: false
+    - name: firefox
+      classic: false
   timezone: Europe/Berlin
   updates: all
