@@ -45,5 +45,5 @@ autoinstall:
     - name: phpstorm
     - name: chromium
     - name: firefox
-  timezone: Europe/Berlin
+  timezone: geoip
   updates: all
