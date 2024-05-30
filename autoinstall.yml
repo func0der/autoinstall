@@ -7,6 +7,14 @@ autoinstall:
     # - generate passphrase
     # - activate reset partition if drive big enough
     # - Build identity section
+  late-commands:
+    - >
+      USERNAME=$(cat /etc/passwd | grep --only-matching '.*1000:.*' | cut --fields=1 --delimiter=:)
+      INITIALS=$(echo $USERNAME | cut --fields=1 --delimiter=: | sed --regexp-extended 's/(^.).*_(.).+/\U\1\2/g')
+      HASHED_PASSWORD="$(echo ${INITIALS}123 | mkpasswd)"
+      echo "${USERNAME}:${HASHED_PASSWORD}" | chpasswd -e
+    # - activate reset partition if drive big enough
+    # - Build identity section
   locale: en_GB.UTF-8
   refresh-installer:
     update: true
