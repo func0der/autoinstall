@@ -20,9 +20,6 @@ autoinstall:
       password: test123
       sizing-policy: scaled
   identity:
-    realname:
-    username:
-    password:
     hostname: inventar-
   user-data:
     users: ['']
