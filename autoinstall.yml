@@ -27,6 +27,9 @@ autoinstall:
       name: lvm
       password: test123
       sizing-policy: scaled
+    swap:
+      size: 16GB
+      maxsize: 24GB
   identity:
     username: ''
     password: ''
