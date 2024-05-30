@@ -42,12 +42,8 @@ autoinstall:
     install: true
   snaps:
     - name: code
-      classic: false
     - name: phpstorm
-      classic: false
     - name: chromium
-      classic: false
     - name: firefox
-      classic: false
   timezone: Europe/Berlin
   updates: all
